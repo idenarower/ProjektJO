@@ -1,0 +1,54 @@
+@use 'fonts' as *;
+@use 'colors' as *;
+@import 'components';
+
+// header --> logo --> navigation
+.header__container {
+	// position: sticky;
+	height: 80px;
+	display: block;
+	&__logobox {
+		&__logoitem {
+			height: 100%;
+			padding: 0.5em;
+		}
+	}
+	&__nav {
+		display: none;
+		background-color: aqua;
+		position: absolute;
+		right: 0;
+		top: 0;
+		line-height: 80px;
+		height: 80px;
+		&__navitem {
+			display: inline-block;
+			font-family: $title-font;
+			font-size: 1.8rem;
+			color: $main-text-color;
+			width: 100px;
+			height: 100px;
+			padding: 2px;
+			border: none;
+			background-color: transparent;
+			cursor: pointer;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	body {
+		font-size: 2.1rem;
+	}
+	.header__container {
+		height: 120px;
+		&__nav {
+			display: block;
+			line-height: 120px;
+			height: 120px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+}

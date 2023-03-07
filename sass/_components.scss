@@ -5,10 +5,23 @@
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
+	text-decoration: none;
 }
 // wrapper --> max width 1200px
 .wrapper {
 	margin: 0 auto;
 	width: 100%;
 	max-width: 1200px;
+}
+html {
+	// font-size rem sizing
+	font-size: 62.5%;
+	// scroll-behavior
+	scroll-behavior: smooth;
+}
+body {
+	background-color: $main-color;
+	color: $main-text-color;
+	font-size: 1.4rem;
+	cursor: pointer;
 }
