@@ -6,6 +6,9 @@
 	margin: 0;
 	padding: 0;
 	text-decoration: none;
+	cursor: pointer;
+	color: $main-text-color;
+	background-color: $main-color;
 }
 // wrapper --> max width 1200px
 .wrapper {
@@ -20,8 +23,5 @@ html {
 	scroll-behavior: smooth;
 }
 body {
-	background-color: $main-color;
-	color: $main-text-color;
 	font-size: 1.4rem;
-	cursor: pointer;
 }
