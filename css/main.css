@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  cursor: pointer;
   color: #000000;
   background-color: #ffffff;
 }
@@ -25,26 +24,48 @@ body {
   font-size: 1.4rem;
 }
 
-body {
-  height: 200vh;
+main div {
+  height: 100vh;
+  background-color: black;
+}
+
+.header {
+  position: sticky;
+  top: 0;
 }
 
 .header__container {
   position: relative;
-  height: 80px;
+  height: 70px;
   display: block;
+}
+.header__container__logobox {
+  background-color: transparent;
 }
 .header__container__logobox__logoitem {
   height: 100%;
   padding: 0.5em;
+}
+.header__container__burgerbox {
+  position: absolute;
+  display: block;
+  right: 4px;
+  top: 0;
+  height: 70px;
+  line-height: 70px;
+}
+.header__container i {
+  padding: 0.7em;
+  font-size: 2.7rem;
+  cursor: pointer;
 }
 .header__container__nav {
   position: absolute;
   display: none;
   right: 0;
   top: 0;
-  line-height: 80px;
-  height: 80px;
+  line-height: 70px;
+  height: 70px;
   margin-right: 2rem;
 }
 .header__container__nav__navitem {
@@ -56,23 +77,42 @@ body {
   line-height: 100px;
   height: 100px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-family: "Poppins", sans-serif;
   font-weight: 900;
   padding: 1em 0.7em;
+  transition: color 0.3s;
+}
+.header__container__nav__navitem a:hover {
+  color: #980606;
 }
 
-@media (min-width: 768px) {
+.footer {
+  width: 100%;
+  height: 25px;
+}
+.footer__container {
+  padding: 0.5em;
+}
+.footer__container__footertext {
+  font-size: 1.6rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  line-height: 25px;
+  height: 25px;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
   .header__container {
     height: 120px;
+  }
+  .header__container__burgerbox {
+    display: none;
   }
   .header__container__nav {
     line-height: 120px;
     height: 120px;
-  }
-}
-@media (min-width: 992px) {
-  .header__container__nav {
     display: block;
   }
 }/*# sourceMappingURL=main.css.map */

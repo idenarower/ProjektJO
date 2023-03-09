@@ -3,46 +3,87 @@
 @import 'components';
 
 // techniczna reguła --> usunąć
-body {
-	height: 200vh;
+main {
+	div {
+		height: 100vh;
+		background-color: black;
+	}
 }
-
+.header {
+	position: sticky;
+	top: 0;
+}
 // header --> logo --> navigation
 .header__container {
 	position: relative;
-	height: 80px;
+	height: 70px;
 	display: block;
-	// background-color: red;
+	// logo
 	&__logobox {
+		background-color: transparent;
 		&__logoitem {
 			height: 100%;
 			padding: 0.5em;
 		}
 	}
+	&__burgerbox {
+		position: absolute;
+		display: block;
+		right: 4px;
+		top: 0;
+		height: 70px;
+		line-height: 70px;
+	}
+	i {
+		padding: 0.7em;
+		font-size: 2.7rem;
+		cursor: pointer;
+	}
+	// navigation standard
 	&__nav {
 		position: absolute;
 		display: none;
-		// background-color: aqua;
 		right: 0;
 		top: 0;
-		line-height: 80px;
-		height: 80px;
+		line-height: 70px;
+		height: 70px;
 		margin-right: 2rem;
 		&__navitem {
 			display: inline-block;
 			border: none;
 			background-color: transparent;
-			// cursor: pointer;
 			a {
 				line-height: 100px;
 				height: 100px;
 				text-align: center;
-				font-size: 2rem;
+				font-size: 1.8rem;
 				font-family: $title-font;
-				// color: $main-text-color;
 				font-weight: 900;
 				padding: 1em 0.7em;
+				transition: color 0.3s;
 			}
+			a:hover {
+				color: $important-text-color;
+			}
+		}
+	}
+}
+
+// footer
+.footer {
+	width: 100%;
+	// background-color: aqua;
+	height: 25px;
+	&__container {
+		padding: 0.5em;
+
+		&__footertext {
+			font-size: 1.6rem;
+			font-family: $text-font;
+			font-weight: 900;
+			line-height: 25px;
+			height: 25px;
+			text-align: center;
 		}
 	}
 }
@@ -51,18 +92,17 @@ body {
 }
 
 @media (min-width: 768px) {
-	.header__container {
-		height: 120px;
-		&__nav {
-			line-height: 120px;
-			height: 120px;
-		}
-	}
 }
 
 @media (min-width: 992px) {
 	.header__container {
+		height: 120px;
+		&__burgerbox {
+			display: none;
+		}
 		&__nav {
+			line-height: 120px;
+			height: 120px;
 			display: block;
 		}
 	}
