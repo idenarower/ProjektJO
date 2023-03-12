@@ -5,7 +5,6 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  color: #000000;
   background-color: #ffffff;
 }
 
@@ -46,18 +45,54 @@ main div {
   height: 100%;
   padding: 0.5em;
 }
-.header__container__burgerbox {
+.header__container__burgeritems {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: #ffffff;
+  z-index: 100;
+}
+.header__container__burgeritems__burgericon {
   position: absolute;
   display: block;
   right: 4px;
   top: 0;
   height: 70px;
   line-height: 70px;
+  z-index: 1000;
 }
-.header__container i {
+.header__container__burgeritems__burgericon .fa-bars {
   padding: 0.7em;
   font-size: 2.7rem;
   cursor: pointer;
+  color: "Poppins", sans-serif;
+  color: #000000;
+  transition: color 0.3s;
+}
+.header__container__burgeritems__burgericon .fa-bars:hover {
+  color: #980606;
+}
+.header__container__burgeritems__item {
+  color: #000000;
+  position: relative;
+  display: block;
+  font-weight: 900;
+  font-size: 1.8rem;
+  font-family: "Poppins", sans-serif;
+  margin: 0.5em 0;
+  padding: 0.5em 2em;
+  text-decoration: none;
+  background: none;
+  transition: color 0.3s;
+}
+.header__container__burgeritems__item:hover {
+  color: #980606;
 }
 .header__container__nav {
   position: absolute;
@@ -82,6 +117,7 @@ main div {
   font-weight: 900;
   padding: 1em 0.7em;
   transition: color 0.3s;
+  color: #000000;
 }
 .header__container__nav__navitem a:hover {
   color: #980606;
@@ -103,16 +139,29 @@ main div {
   text-align: center;
 }
 
+@media (min-width: 768px) {
+  .header__container__burgeritems__burgericon .fa-bars {
+    font-size: 4rem;
+  }
+  .header__container__burgeritems__item {
+    font-size: 3rem;
+  }
+}
 @media (min-width: 992px) {
   .header__container {
     height: 120px;
   }
-  .header__container__burgerbox {
+  .header__container__burgeritems {
     display: none;
   }
   .header__container__nav {
     line-height: 120px;
     height: 120px;
     display: block;
+  }
+}
+@media (min-width: 1200px) {
+  .header__container__nav__navitem a {
+    font-size: 2.2rem;
   }
 }/*# sourceMappingURL=main.css.map */
