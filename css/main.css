@@ -45,6 +45,26 @@ main div {
   height: 100%;
   padding: 0.5em;
 }
+.header__container__burgericon {
+  position: absolute;
+  display: inline;
+  right: 4px;
+  top: 0;
+  height: 70px;
+  line-height: 70px;
+  z-index: 1000;
+}
+.header__container__burgericon .fa-bars {
+  padding: 0.7em;
+  font-size: 2.7rem;
+  cursor: pointer;
+  color: "Poppins", sans-serif;
+  color: #000000;
+  transition: color 0.3s;
+}
+.header__container__burgericon .fa-bars:hover {
+  color: #980606;
+}
 .header__container__burgeritems {
   position: fixed;
   top: 0;
@@ -57,30 +77,17 @@ main div {
   width: 100%;
   background-color: #ffffff;
   z-index: 100;
+  transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform: translateY(-1000%);
 }
-.header__container__burgeritems__burgericon {
-  position: absolute;
-  display: block;
-  right: 4px;
-  top: 0;
-  height: 70px;
-  line-height: 70px;
-  z-index: 1000;
-}
-.header__container__burgeritems__burgericon .fa-bars {
-  padding: 0.7em;
-  font-size: 2.7rem;
-  cursor: pointer;
-  color: "Poppins", sans-serif;
-  color: #000000;
-  transition: color 0.3s;
-}
-.header__container__burgeritems__burgericon .fa-bars:hover {
-  color: #980606;
+.header__container__burgeritems--active {
+  transform: translateY(0%);
+  justify-content: left;
+  overflow-y: auto;
+  padding: 50px 0;
 }
 .header__container__burgeritems__item {
   color: #000000;
-  position: relative;
   display: block;
   font-weight: 900;
   font-size: 1.8rem;
@@ -140,7 +147,13 @@ main div {
 }
 
 @media (min-width: 768px) {
-  .header__container__burgeritems__burgericon .fa-bars {
+  .header__container {
+    height: 120px;
+  }
+  .header__container__burgericon .fa-bars {
+    display: inline;
+    line-height: 120px;
+    height: 120px;
     font-size: 4rem;
   }
   .header__container__burgeritems__item {
@@ -148,10 +161,7 @@ main div {
   }
 }
 @media (min-width: 992px) {
-  .header__container {
-    height: 120px;
-  }
-  .header__container__burgeritems {
+  .header__container__burgericon {
     display: none;
   }
   .header__container__nav {
