@@ -138,26 +138,11 @@ main {
 }
 
 @media (min-width: 768px) {
-	.header__container {
-		height: 120px;
-		&__burgericon {
-			.fa-bars {
-				display: inline;
-				line-height: 120px;
-				height: 120px;
-				font-size: 4rem;
-			}
-		}
-		&__burgeritems {
-			&__item {
-				font-size: 3rem;
-			}
-		}
-	}
 }
 
 @media (min-width: 992px) {
 	.header__container {
+		height: 120px;
 		&__burgericon {
 			display: none;
 		}

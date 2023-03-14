@@ -146,21 +146,10 @@ main div {
   text-align: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .header__container {
     height: 120px;
   }
-  .header__container__burgericon .fa-bars {
-    display: inline;
-    line-height: 120px;
-    height: 120px;
-    font-size: 4rem;
-  }
-  .header__container__burgeritems__item {
-    font-size: 3rem;
-  }
-}
-@media (min-width: 992px) {
   .header__container__burgericon {
     display: none;
   }
