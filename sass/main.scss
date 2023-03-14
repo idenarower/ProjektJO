@@ -3,11 +3,26 @@
 @import 'components';
 
 // techniczna reguła --> usunąć
-main {
-	div {
-		height: 100vh;
-		background-color: black;
-	}
+// main {
+// 	div {
+// 		height: 100vh;
+// 		background-color: red;
+// 	}
+// }
+// components
+.line-60 {
+	margin: 1.5em;
+	width: 60%;
+	height: 3px;
+	background-color: $main-text-color;
+	z-index: 1;
+}
+.line-100 {
+	// margin: 1.5em;
+	width: 100%;
+	height: 3px;
+	background-color: $main-text-color;
+	z-index: 1;
 }
 .header {
 	position: sticky;
@@ -17,6 +32,7 @@ main {
 .header__container {
 	position: relative;
 	height: 70px;
+
 	display: block;
 	// logo
 	&__logobox {
@@ -58,7 +74,7 @@ main {
 		height: 100vh;
 		width: 100%;
 		background-color: $nav-color;
-		z-index: 100;
+		z-index: 400;
 		transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 		transform: translateY(-1000%);
 		&--active {
@@ -114,6 +130,27 @@ main {
 		}
 	}
 }
+// mani
+// section abaut us
+.abaut-us {
+	&__box {
+		&__title {
+			padding: 0.5em;
+			font-size: 2.7rem;
+			font-weight: 900;
+			font-family: $title-font;
+			color: $main-text-color;
+			line-height: 3rem;
+		}
+		&__text {
+			padding: 0.2em 0.5em;
+			font-size: 1.4rem;
+			font-weight: 400;
+			font-family: $text-font;
+			line-height: 1.9rem;
+		}
+	}
+}
 
 // footer
 .footer {
@@ -137,7 +174,25 @@ main {
 @media (min-width: 576px) {
 }
 
-@media (min-width: 768px) {
+@media (min-width: 768px) {	.abaut-us {
+	&__box {
+		&__title {
+			padding: 0.5em;
+			font-size: 5rem;
+			font-weight: 900;
+			font-family: $title-font;
+			color: $main-text-color;
+			line-height: 6rem;
+		}
+		&__text {
+			padding: 0.5em;
+			font-size: 2rem;
+			font-weight: 400;
+			font-family: $text-font;
+			line-height: 2.1rem;
+		}
+	}
+}
 }
 
 @media (min-width: 992px) {
@@ -157,6 +212,27 @@ main {
 	.header__container__nav__navitem {
 		a {
 			font-size: 2.2rem;
+		}
+	}
+	// mani
+	// section abaut us
+	.abaut-us {
+		&__box {
+			&__title {
+				padding: 0.5em;
+				font-size: 6rem;
+				font-weight: 900;
+				font-family: $title-font;
+				color: $main-text-color;
+				line-height: 7rem;
+			}
+			&__text {
+				padding: 0.5em;
+				font-size: 2rem;
+				font-weight: 400;
+				font-family: $text-font;
+				line-height: 2.2rem;
+			}
 		}
 	}
 }
